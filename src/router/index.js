@@ -1,11 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
+// import Home from "../views/Home.vue";
+import SignatureGenerator from "../views/SignatureGenerator.vue";
+import QRgenerator from "../views/QRgenerator.vue";
 
 const routes = [
+  // {
+  //   path: "/",
+  //   name: "Home",
+  //   component: Home,
+  // },
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Signature",
+    component: SignatureGenerator,
+  },
+  {
+    path: "/qr-generator",
+    name: "QR Generator",
+    component: QRgenerator,
   },
   {
     path: "/about",

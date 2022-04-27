@@ -5,10 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "easyqrcodejs": "^4.4.10",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },
