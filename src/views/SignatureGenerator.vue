@@ -142,7 +142,7 @@
                 </p>
               </div>
               <div class="partner">
-                <img src="../assets/AOG-animated-logos.gif" alt="partners" />
+                <img src="../assets/google-partner.png" alt="partners" />
               </div>
             </div>
             <div class="disclaimer">
@@ -185,7 +185,7 @@
                 </p>
               </div>
               <div class="partner">
-                <img src="../assets/AOG-animated-logos.gif" alt="partners" />
+                <img src="../assets/google-partner.png" alt="partners" />
               </div>
             </div>
             <div class="disclaimer">
@@ -253,19 +253,19 @@ export default {
       const phone = this.sigPhone;
       const mobile = this.sigMobile;
       const logoPartnerb64 =
-        "https://adondevelopment.com/clients/2021_sig_directory/images/AdOn-logo-and-partners-higher-res-updated-v2.gif";
+        "https://adongroup.com.au/wp-content/uploads/2022/11/google-partner.png";
       if (this.isShowPhone == true && this.isShowMobile == false) {
         const openSig = document.open("", "", "fullscreen=yes");
         openSig.document.write(
-          "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns='http://www.w3.org/1999/xhtml'> <head> <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/> <title>Ad On Group - Digital Marketing Specialists</title> </head> <body> <table width='650' height='170' border='0' cellspacing='0' cellpadding='0' style=' border-collapse: collapse; background: url(https://adondevelopment.com/clients/2021_sig_directory/images/background.png); background-repeat: no-repeat; background-size: cover; border-radius: 15px; color: white; font-family: sans-serif; line-height: 0px; font-size: 1px; padding: 0px; border-spacing: 0px; margin: 0; text-decoration: none; '> <tr> <td width='180'><img style='width: 180px; height: auto;' src='https://adondevelopment.com/clients/2021_sig_directory/images/AOG-logo_white.png' alt=''/></td><td> <table width='95%' height='85%' border='0' cellspacing='0' cellpadding='0' style='margin-left: 10px; margin-top: 20px;'> <tr> <td height='15' style='font-size: 15px; color: white;'><b>" +
+          "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns='http://www.w3.org/1999/xhtml'> <head> <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/> <title>Ad On Group - Digital Marketing Specialists</title> </head> <body> <table width='650' height='170' border='0' cellspacing='0' cellpadding='0' style=' border-collapse: collapse; background: url(https://adongroup.com.au/wp-content/uploads/2022/11/bg-gradiant.png); background-repeat: no-repeat; background-size: cover; border-radius: 15px; color: white; font-family: sans-serif; line-height: 0px; font-size: 1px; padding: 0px; border-spacing: 0px; margin: 0; text-decoration: none; '> <tr> <td width='180'><img style='width: 180px; height: auto;' src='https://adongroup.com.au/wp-content/uploads/2022/11/AOG-logo.png' alt=''/></td><td> <table width='95%' height='85%' border='0' cellspacing='0' cellpadding='0' style='margin-left: 10px; margin-top: 20px;'> <tr> <td height='15' style='font-size: 15px; color: white;'><b>" +
             name +
             "</b></td></tr><tr> <td height='11' style='font-size: 11px; line-height: 1; color: white;'><b>" +
             position +
             " </b></td></tr><tr> <td height='50' style='line-height: 1.2; font-size: 10px;'> <p> <a style='text-decoration: none; color: white;' href='tel:" +
             phone +
-            "'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
+            "'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
             phone +
-            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
+            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
             logoPartnerb64 +
             "' alt='Partner'/></td></tr><tr> <td colspan='3' height='40' style='line-height: 1.2; font-size: 8px;'> <p style='font-size: 8px; margin-left: 12px; margin-right: 12px; margin-bottom: 10px;'> This email, its contents and any attachments are strictly confidential. They must not be used, distributed, copied or read by any person other than the addressee. Unauthorised use, disclosure, copying or reliance on the contents of and attachments to this email by anyone other than the addressee may be unlawful. If you have received this email and attachments in error please contact us at Ad on Group immediately to facilitate its return. </p></td></tr></table> </body></html>"
         );
@@ -273,15 +273,15 @@ export default {
       } else if (this.isShowMobile == true && this.isShowPhone == false) {
         const openSig = document.open("", "", "fullscreen=yes");
         openSig.document.write(
-          "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns='http://www.w3.org/1999/xhtml'> <head> <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/> <title>Ad On Group - Digital Marketing Specialists</title> </head> <body> <table width='650' height='170' border='0' cellspacing='0' cellpadding='0' style=' border-collapse: collapse; background: url(https://adondevelopment.com/clients/2021_sig_directory/images/background.png); background-repeat: no-repeat; background-size: cover; border-radius: 15px; color: white; font-family: sans-serif; line-height: 0px; font-size: 1px; padding: 0px; border-spacing: 0px; margin: 0; text-decoration: none; '> <tr> <td width='180'><img style='width: 180px; height: auto;' src='https://adondevelopment.com/clients/2021_sig_directory/images/AOG-logo_white.png' alt=''/></td><td> <table width='95%' height='85%' border='0' cellspacing='0' cellpadding='0' style='margin-left: 10px; margin-top: 20px;'> <tr> <td height='15' style='font-size: 15px; color: white;'><b>" +
+          "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns='http://www.w3.org/1999/xhtml'> <head> <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/> <title>Ad On Group - Digital Marketing Specialists</title> </head> <body> <table width='650' height='170' border='0' cellspacing='0' cellpadding='0' style=' border-collapse: collapse; background: url(https://adongroup.com.au/wp-content/uploads/2022/11/bg-gradiant.png); background-repeat: no-repeat; background-size: cover; border-radius: 15px; color: white; font-family: sans-serif; line-height: 0px; font-size: 1px; padding: 0px; border-spacing: 0px; margin: 0; text-decoration: none; '> <tr> <td width='180'><img style='width: 180px; height: auto;' src='https://adongroup.com.au/wp-content/uploads/2022/11/AOG-logo.png' alt=''/></td><td> <table width='95%' height='85%' border='0' cellspacing='0' cellpadding='0' style='margin-left: 10px; margin-top: 20px;'> <tr> <td height='15' style='font-size: 15px; color: white;'><b>" +
             name +
             "</b></td></tr><tr> <td height='11' style='font-size: 11px; line-height: 1; color: white;'><b>" +
             position +
             " </b></td></tr><tr> <td height='50' style='line-height: 1.2; font-size: 10px;'> <p> <a style='text-decoration: none; color: white;' href='tel:" +
             mobile +
-            "'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-mobile-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
+            "'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-mobile-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
             mobile +
-            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
+            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
             logoPartnerb64 +
             "' alt='Partner'/></td></tr><tr> <td colspan='3' height='40' style='line-height: 1.2; font-size: 8px;'> <p style='font-size: 8px; margin-left: 12px; margin-right: 12px; margin-bottom: 10px;'> This email, its contents and any attachments are strictly confidential. They must not be used, distributed, copied or read by any person other than the addressee. Unauthorised use, disclosure, copying or reliance on the contents of and attachments to this email by anyone other than the addressee may be unlawful. If you have received this email and attachments in error please contact us at Ad on Group immediately to facilitate its return. </p></td></tr></table> </body></html>"
         );
@@ -289,19 +289,19 @@ export default {
       } else {
         const openSig = document.open("", "", "fullscreen=yes");
         openSig.document.write(
-          "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns='http://www.w3.org/1999/xhtml'> <head> <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/> <title>Ad On Group - Digital Marketing Specialists</title> </head> <body> <table width='650' height='170' border='0' cellspacing='0' cellpadding='0' style=' border-collapse: collapse; background: url(https://adondevelopment.com/clients/2021_sig_directory/images/background.png); background-repeat: no-repeat; background-size: cover; border-radius: 15px; color: white; font-family: sans-serif; line-height: 0px; font-size: 1px; padding: 0px; border-spacing: 0px; margin: 0; text-decoration: none; '> <tr> <td width='180'><img style='width: 180px; height: auto;' src='https://adondevelopment.com/clients/2021_sig_directory/images/AOG-logo_white.png' alt=''/></td><td> <table width='95%' height='85%' border='0' cellspacing='0' cellpadding='0' style='margin-left: 10px; margin-top: 20px;'> <tr> <td height='15' style='font-size: 15px; color: white;'><b>" +
+          "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns='http://www.w3.org/1999/xhtml'> <head> <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/> <title>Ad On Group - Digital Marketing Specialists</title> </head> <body> <table width='650' height='170' border='0' cellspacing='0' cellpadding='0' style=' border-collapse: collapse; background: url(https://adongroup.com.au/wp-content/uploads/2022/11/bg-gradiant.png); background-repeat: no-repeat; background-size: cover; border-radius: 15px; color: white; font-family: sans-serif; line-height: 0px; font-size: 1px; padding: 0px; border-spacing: 0px; margin: 0; text-decoration: none; '> <tr> <td width='180'><img style='width: 180px; height: auto;' src='https://adongroup.com.au/wp-content/uploads/2022/11/AOG-logo.png' alt=''/></td><td> <table width='95%' height='85%' border='0' cellspacing='0' cellpadding='0' style='margin-left: 10px; margin-top: 20px;'> <tr> <td height='15' style='font-size: 15px; color: white;'><b>" +
             name +
             "</b></td></tr><tr> <td height='11' style='font-size: 11px; line-height: 1; color: white;'><b>" +
             position +
             " </b></td></tr><tr> <td height='50' style='line-height: 1.2; font-size: 10px;'> <p> <a style='text-decoration: none; color: white;' href='tel:" +
             phone +
-            "'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
+            "'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
             phone +
             "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='tel:" +
             mobile +
-            "'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-mobile-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
+            "'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-mobile-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
             mobile +
-            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
+            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
             logoPartnerb64 +
             "' alt='Partner'/></td></tr><tr> <td colspan='3' height='40' style='line-height: 1.2; font-size: 8px;'> <p style='font-size: 8px; margin-left: 12px; margin-right: 12px; margin-bottom: 10px;'> This email, its contents and any attachments are strictly confidential. They must not be used, distributed, copied or read by any person other than the addressee. Unauthorised use, disclosure, copying or reliance on the contents of and attachments to this email by anyone other than the addressee may be unlawful. If you have received this email and attachments in error please contact us at Ad on Group immediately to facilitate its return. </p></td></tr></table> </body></html>"
         );
@@ -314,7 +314,7 @@ export default {
       const phone = this.sigPhone;
       const mobile = this.sigMobile;
       const logoPartnerb64 =
-        "https://adondevelopment.com/clients/2021_sig_directory/images/AdOn-logo-and-partners-higher-res-updated-v2.gif";
+        "https://adongroup.com.au/wp-content/uploads/2022/11/google-partner.png";
       if (this.isShowPhone == true && this.isShowMobile == false) {
         const openSig = document.open("", "", "fullscreen=yes");
         openSig.document.write(
@@ -326,7 +326,7 @@ export default {
             phone +
             "'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
             phone +
-            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
+            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
             logoPartnerb64 +
             "' alt='Partner'/></td></tr><tr> <td colspan='3' height='40' style='line-height: 1.2; font-size: 8px;'> <p style='font-size: 8px; margin-left: 12px; margin-right: 12px; margin-bottom: 10px;'> This email, its contents and any attachments are strictly confidential. They must not be used, distributed, copied or read by any person other than the addressee. Unauthorised use, disclosure, copying or reliance on the contents of and attachments to this email by anyone other than the addressee may be unlawful. If you have received this email and attachments in error please contact us at Ad on Group immediately to facilitate its return. </p></td></tr></table> </body></html>"
         );
@@ -340,9 +340,9 @@ export default {
             position +
             " </b></td></tr><tr> <td height='50' style='line-height: 1.2; font-size: 10px;'> <p> <a style='text-decoration: none; color: white;' href='tel:" +
             mobile +
-            "'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-mobile-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
+            "'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-mobile-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
             mobile +
-            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
+            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
             logoPartnerb64 +
             "' alt='Partner'/></td></tr><tr> <td colspan='3' height='40' style='line-height: 1.2; font-size: 8px;'> <p style='font-size: 8px; margin-left: 12px; margin-right: 12px; margin-bottom: 10px;'> This email, its contents and any attachments are strictly confidential. They must not be used, distributed, copied or read by any person other than the addressee. Unauthorised use, disclosure, copying or reliance on the contents of and attachments to this email by anyone other than the addressee may be unlawful. If you have received this email and attachments in error please contact us at Ad on Group immediately to facilitate its return. </p></td></tr></table> </body></html>"
         );
@@ -360,9 +360,9 @@ export default {
             phone +
             "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='tel:" +
             mobile +
-            "'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-mobile-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
+            "'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-mobile-01.png' alt='phone'/> <span style='font-size: 12px;'>&nbsp " +
             mobile +
-            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adondevelopment.com/clients/2021_sig_directory/images/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
+            "</span> </a> <br/> <a style='text-decoration: none; color: white;' href='https://www.adongroup.com.au'> <img style='width: 10px; align-items: center;' src='https://adongroup.com.au/wp-content/uploads/2022/11/icon-02.png' alt='internet'/> <span style='font-size: 12px;'>&nbsp www.adongroup.com.au</span> </a> </p></td></tr></table> </td><td width='250px'><img style='width: 250px; height: auto; float: right;' src='" +
             logoPartnerb64 +
             "' alt='Partner'/></td></tr><tr> <td colspan='3' height='40' style='line-height: 1.2; font-size: 8px;'> <p style='font-size: 8px; margin-left: 12px; margin-right: 12px; margin-bottom: 10px;'> This email, its contents and any attachments are strictly confidential. They must not be used, distributed, copied or read by any person other than the addressee. Unauthorised use, disclosure, copying or reliance on the contents of and attachments to this email by anyone other than the addressee may be unlawful. If you have received this email and attachments in error please contact us at Ad on Group immediately to facilitate its return. </p></td></tr></table> </body></html>"
         );
@@ -416,7 +416,7 @@ export default {
 } */
 .signature-data {
   background-color: var(--dark);
-  background: url("https://adondevelopment.com/clients/2021_sig_directory/images/background.png");
+  background: url("https://adongroup.com.au/wp-content/uploads/2022/11/bg-gradiant.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.5rem;
