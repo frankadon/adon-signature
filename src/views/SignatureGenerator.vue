@@ -408,12 +408,7 @@ export default {
   box-shadow: var(--shadow);
   border-radius: var(--corner-radius);
 }
-/* .row {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  align-items: flex-start;
-} */
+
 .signature-data {
   background-color: var(--dark);
   background: url("https://adongroup.com.au/wp-content/uploads/2022/11/bg-gradiant.png");
