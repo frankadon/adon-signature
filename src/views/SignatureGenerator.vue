@@ -1,12 +1,25 @@
 <template>
   <div class="row">
     <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-          <form class="form">
-            <h4>Signature form</h4>
-            <div class="radio-group">
-              <h5>Options</h5>
+      <div class="my-card">
+        <form class="form">
+          <h4>Signature form</h4>
+          <div class="radio-group">
+            <h5>Options</h5>
+            <div class="form-check">
+              <input
+                @click="$event => showAOGSignature()"
+                type="radio"
+                name="sig"
+                class="form-check-input"
+                id="aogsignature"
+                checked
+              >
+              <label class="form-check-label" for="aogsignature">
+                AOG Signature
+              </label>
+            </div>
+            <div v-if="isAOGSig" class="my-card">
               <div class="form-check">
                 <input
                   @click="getOption1()"
@@ -48,6 +61,63 @@
                 </label>
               </div>
             </div>
+            <div class="form-check">
+              <input
+                @click="$event => showAOWSignature()"
+                type="radio"
+                name="sig"
+                class="form-check-input"
+                id="aowsignature"
+              >
+              <label class="form-check-label" for="aowsignature">
+                AOW Signature
+              </label>
+            </div>
+            <div v-if="isAOWSig" class="my-card">
+            <div class="form-check">
+              <input
+                @click="getOption1()"
+                class="form-check-input"
+                name="options"
+                type="radio"
+                value="option1"
+                id="option1"
+                checked
+              />
+              <label class="form-check-label" for="option1">
+                Phone only
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                @click="getOption2()"
+                class="form-check-input"
+                name="options"
+                type="radio"
+                value="option2"
+                id="option2"
+              />
+              <label class="form-check-label" for="option2">
+                Mobile only
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                @click="getOption3()"
+                class="form-check-input"
+                name="options"
+                type="radio"
+                value="option3"
+                id="option3"
+              />
+              <label class="form-check-label" for="option3">
+                Both number
+              </label>
+            </div>
+          </div>
+          </div>
+
+          <div v-if="isAOGSig">
             <div class="form-floating mb-2 mt-2">
               <input
                 v-model="sigName"
@@ -94,51 +164,121 @@
               />
               <label v-if="isShowMobile" for="mobile-number">Mobile</label>
             </div>
+          </div>
 
-            <div class="action-btn">
-              <Button
-                @click="generateEmailSignature()"
-                Text="For Gmail"
-                bgColor="primary"
+          <div v-if="isAOWSig">
+            <div class="form-floating mb-2 mt-2">
+              <input
+                v-model="sigName"
+                class="form-control"
+                name="name"
+                type="text"
+                id="signame"
+                :placeholder="sigName"
               />
-              <Button
-                @click="generateParadiseSignature()"
-                Text="For Paradise"
-                bgColor="primary"
-              />
+              <label for="signame">Name</label>
             </div>
-          </form>
-        </div>
+            <div class="form-floating mb-2">
+              <input
+                v-model="sigPosition"
+                class="form-control"
+                name="position"
+                type="text"
+                id="sigposition"
+                :placeholder="sigPosition"
+              />
+              <label for="sigposition">Position</label>
+            </div>
+            <div class="form-floating mb-2 mt-2">
+              <input
+                v-model="sigEmail"
+                class="form-control"
+                name="email"
+                type="email"
+                id="email"
+                :placeholder="sigEmail"
+              />
+              <label for="sigemail">Email</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input
+                v-if="isShowPhone"
+                v-model="sigPhone"
+                class="form-control"
+                name="phone"
+                type="text"
+                id="sigphone"
+                placeholder="Phone"
+              />
+              <label v-if="isShowPhone" for="sigphone">Phone</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input
+                v-if="isShowMobile"
+                v-model="sigMobile"
+                class="form-control"
+                id="mobile-number"
+                name="mobile"
+                type="text"
+                :placeholder="sigMobile"
+              />
+              <label v-if="isShowMobile" for="mobile-number">Mobile</label>
+            </div>
+          </div>
+          
+
+          <div class="action-btn">
+            <Button
+              v-if="isAOGSig"
+              @click="generateEmailSignature()"
+              Text="Generate"
+              bgColor="primary"
+            />
+            <Button
+              v-if="isAOWSig"
+              @click="generateParadiseSignature()"
+              Text="Generate"
+              bgColor="primary"
+            />
+          </div>
+        </form>
       </div>
     </div>
     <div class="col-sm-8">
-      <div class="card">
-        <div class="card-body">
-          <h4>Signature Preview</h4>
-          <hr />
-          <div class="signature-data">
+      <div class="my-card">
+          <h4>Preview</h4>
+          <div v-if="isAOGSig" class="signature-data">
             <div class="data">
-              <div class="logo">
+              <!-- <div class="logo-aog">
                 <img src="../assets/AOG-logo.png" alt="logo" />
-              </div>
+              </div> -->
+              <SignatureLogo
+                clsname="logo-aog"
+                logolink="https://adongroup.com.au/wp-content/uploads/2022/11/AOG-logo.png"
+              />
               <div class="info">
-                <strong> {{ sigName }} </strong>
-                <p>{{ sigPosition }}</p>
+                <SignatureName :text="sigName" />
+                <SignaturePosition :text="sigPosition"/>
                 <p class="links">
-                  <a v-if="isShowPhone" href=""
-                    ><img src="../assets/icons/icon-01.png" alt="" />
-                    {{ sigPhone }}
-                  </a>
+                  <SignatureLink 
+                    v-if="isShowPhone"
+                    link="https://adongroup.com.au/wp-content/uploads/2022/11/icon-01.png"
+                    :text="sigPhone"
+                    href="tel:07 5586 1400"
+                  />
                   <br v-if="isShowPhone" />
-                  <a v-if="isShowMobile" href=""
-                    ><img src="../assets/icons/icon-mobile-01.png" alt="" />
-                    {{ sigMobile }}
-                  </a>
+                  <SignatureLink
+                    v-if="isShowMobile"
+                    link="https://adongroup.com.au/wp-content/uploads/2022/11/icon-mobile-01.png"
+                    :text="sigMobile"
+                    href="tel: 0401 736 730"
+                  />
                   <br v-if="isShowMobile" />
-                  <a href=""
-                    ><img src="../assets/icons/icon-02.png" alt="" />
-                    www.adongroup.com.au</a
-                  >
+                  <SignatureLink
+                    link="https://adongroup.com.au/wp-content/uploads/2022/11/icon-02.png"
+                    text="www.adongroup.com.au"
+                    href="http://www.adongroup.com.au"
+                  />
                 </p>
               </div>
               <div class="partner">
@@ -146,69 +286,92 @@
               </div>
             </div>
             <div class="disclaimer">
-              <p>
-                This email, its contents and any attachments are strictly
+              <Disclaimer text="This email, its contents and any attachments are strictly
                 confidential. They must not be used, distributed, copied or read
                 by any person other than the addressee. Unauthorised use,
                 disclosure, copying or reliance on the contents of and
                 attachments to this email by anyone other than the addressee may
                 be unlawful. If you have received this email and attachments in
                 error please contact us at Ad on Group immediately to facilitate
-                its return.
-              </p>
+                its return."/>
             </div>
           </div>
-          <br />
-          <div class="signature-data-paradise">
+          <div v-if="isAOWSig" class="signature-data-paradise">
             <div class="data">
-              <div class="logo">
-                <img src="../assets/AOG-logo.png" alt="logo" />
-              </div>
+              <SignatureLogo
+                clsname="logo-aow"
+                logolink="https://adonworkforce.com.au/wp-content/uploads/2023/03/Ad-on-Workforce-logo.png"
+                text="A Division of Ad On Group"
+              />
               <div class="info">
-                <strong> {{ sigName }} </strong>
-                <p>{{ sigPosition }}</p>
+                <SignatureName :text="sigName" />
+                <SignaturePosition :text="sigPosition"/>
                 <p class="links">
-                  <a v-if="isShowPhone" href=""
-                    ><img src="../assets/icons/icon-01.png" alt="" />
-                    {{ sigPhone }}
-                  </a>
+                  <SignatureLink
+                    v-if="isShowPhone"
+                    link="https://adongroup.com.au/wp-content/uploads/2022/11/icon-01.png"
+                    :text="sigPhone"
+                    href="tel:07 5586 1400"
+                  />
                   <br v-if="isShowPhone" />
-                  <a v-if="isShowMobile" href=""
-                    ><img src="../assets/icons/icon-mobile-01.png" alt="" />
-                    {{ sigMobile }}
-                  </a>
+                  <SignatureLink
+                    v-if="isShowMobile"
+                    link="https://adongroup.com.au/wp-content/uploads/2022/11/icon-mobile-01.png"
+                    :text="sigMobile"
+                    href="tel: 0401 736 730"
+                  />
                   <br v-if="isShowMobile" />
-                  <a href=""
-                    ><img src="../assets/icons/icon-02.png" alt="" />
-                    www.adongroup.com.au</a
-                  >
+                  <SignatureLink
+                    link="https://adongroup.com.au/wp-content/uploads/2022/11/icon-02.png"
+                    :text="sigEmail"
+                    :href="'mailto'+':'+sigEmail"
+                  />
+                  <br>
+                  <SignatureLink
+                    link="https://adongroup.com.au/wp-content/uploads/2022/11/icon-02.png"
+                    text="www.adonworkforce.com.au"
+                    href="http://www.adonworkforce.com.au"
+                  />
                 </p>
               </div>
               <div class="partner">
-                <img src="../assets/google-partner.png" alt="partners" />
+                <SignatureLogo
+                  clsname="logo-aogaow"
+                  logolink="https://adongroup.com.au/wp-content/uploads/2022/11/AOG-logo.png"
+                />
               </div>
             </div>
             <div class="disclaimer">
-              <p>
-                This email, its contents and any attachments are strictly
+              <Disclaimer text="This email, its contents and any attachments are strictly
                 confidential. They must not be used, distributed, copied or read
                 by any person other than the addressee. Unauthorised use,
                 disclosure, copying or reliance on the contents of and
                 attachments to this email by anyone other than the addressee may
                 be unlawful. If you have received this email and attachments in
                 error please contact us at Ad on Group immediately to facilitate
-                its return.
-              </p>
+                its return."/>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+// icons
+import PhoneIcon from "../assets/icons/icon-01.png"
+import MobileIcon from "../assets/icons/icon-mobile-01.png"
+import GlobeIcon from "../assets/icons/icon-02.png"
+import AOWLogo from "../assets/Ad-on-Workforce-logo.png"
+import AOGLogo from "../assets/AOG-logo.png"
+
+
 import Button from "@/components/Button.vue";
+import SignatureName from "@/components/signature/SignatureName.vue";
+import SignaturePosition from "@/components/signature/SignaturePosition.vue";
+import Disclaimer from "@/components/signature/Disclaimer.vue";
+import SignatureLink from "@/components/signature/SignatureLink.vue";
+import SignatureLogo from "@/components/SignatureLogo.vue";
 
 export default {
   name: "Home",
@@ -218,12 +381,25 @@ export default {
       sigPosition: "Position",
       sigPhone: "07 5586 1400",
       sigMobile: "0401 736 730",
+      sigEmail: "info@adonworkforce.com.au",
       isShowPhone: true,
       isShowMobile: false,
+      isAOGSig: true,
+      isAOWSig: false,
+      phoneIcon: PhoneIcon,
+      mobileIcon: MobileIcon,
+      globeIcon: GlobeIcon,
+      aowLogo: AOWLogo,
+      aogLogo: AOGLogo,
     };
   },
   components: {
     Button,
+    SignatureName,
+    SignaturePosition,
+    Disclaimer,
+    SignatureLink,
+    SignatureLogo
   },
   mounted() {
     // const options = document.querySelector(
@@ -235,6 +411,14 @@ export default {
     // }
   },
   methods: {
+    showAOGSignature() {
+      this.isAOGSig = true;
+      this.isAOWSig = false;
+    },
+    showAOWSignature() {
+      this.isAOGSig = false;
+      this.isAOWSig = true;
+    },
     getOption1() {
       this.isShowPhone = true;
       this.isShowMobile = false;
@@ -252,6 +436,7 @@ export default {
       const position = this.sigPosition;
       const phone = this.sigPhone;
       const mobile = this.sigMobile;
+      // const email = this.sigEmail;
       const logoPartnerb64 =
         "https://adongroup.com.au/wp-content/uploads/2022/11/google-partner.png";
       if (this.isShowPhone == true && this.isShowMobile == false) {
@@ -421,7 +606,8 @@ export default {
 }
 .signature-data-paradise {
   background-color: var(--dark);
-  background: #000000;
+  /* background-image: linear-gradient(#07031E, #00057B); */
+  background-image: url("https://adongroup.com.au/wp-content/uploads/2022/11/bg-gradiant.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.5rem;
@@ -433,13 +619,41 @@ export default {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+  align-items: center;
 }
-.logo {
+/* .logo-aog {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  color: #ffffff;
+  gap: .5rem;
 }
-.logo img {
+.logo-aow {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  color: #ffffff;
+  gap: .5rem;
+}
+.logo-aog img {
   width: 100%;
 }
+.logo-aow img {
+  width: 100%;
+  margin-top: -3rem;
+}
+
+.logo-aow strong {
+  font-size: 12px;
+}
+
+.logo-aog strong {
+  font-size: 12px;
+} */
 .info {
   width: 30%;
   color: var(--white);
@@ -462,7 +676,8 @@ export default {
   color: var(--white);
 }
 .partner {
-  width: 40%;
+  width: 30%;
+  /* padding-top: 1rem; */
 }
 .partner img {
   width: 100%;
@@ -477,7 +692,16 @@ export default {
 .action-btn {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: space-between;
   gap: 5px;
+}
+.my-card {
+  background-color: white;
+  border-radius: .5rem;
+  padding: 1rem;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0,.15);
+}
+.logo-aog-aow {
+    width: 100%;
 }
 </style>

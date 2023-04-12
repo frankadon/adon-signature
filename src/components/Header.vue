@@ -1,7 +1,8 @@
 <template>
   <nav
-    class="navbar navbar-expand-lg navbar-dark"
+    class="navbar navbar-expand-lg navbar-dark mb-3"
     style="background-color: #000000"
+    id="nav"
   >
     <div class="container">
       <a class="navbar-brand" href="/">ADON PAGES</a>
@@ -31,6 +32,14 @@
       </div>
     </div>
   </nav>
+  <!-- <nav class="new-nav">
+    <div class="container">
+        <div>
+          <a href="/">AD ON Pages</a>
+        </div>
+        <a href="/">Email signatures</a>
+    </div>
+  </nav> -->
 </template>
 
 <script>
@@ -39,25 +48,34 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
 .content {
   width: 80%;
   margin: auto;
 }
 #nav {
-  height: 80px;
+  height: 60px;
   background-color: var(--black);
-  margin-bottom: 10px;
   display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
 #nav a {
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+}
+
+#nav a:hover {
   font-weight: 500;
   color: var(--primary);
   text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
-  color: var(--light);
+  color: var(--primary);
 }
 </style>

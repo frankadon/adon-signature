@@ -25,8 +25,8 @@
       inputName="mobile"
       inputPlaceholder="Mobile number"
     />
-    <Button Text="For Gmail" />
-    <Button Text="For Paradise" />
+    <Button Text="AOG Signature" />
+    <Button Text="AOW Signature" />
   </form>
 </template>
 <script>

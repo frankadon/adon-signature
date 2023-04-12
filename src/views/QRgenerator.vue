@@ -91,7 +91,8 @@
             <div class="col-md-8">
               <div class="card-body">
                 <p class="card-title">
-                  {{ imageName }} |
+                  {{ imageName }}
+                  <br>
                   <small class="text-muted" v-show="imageBase64"
                     >File size: {{ imageSize }} KB</small
                   >
