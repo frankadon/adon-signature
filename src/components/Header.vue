@@ -22,9 +22,9 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/">Ad On Signature</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="/qr-generator">QR Generator</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
           </li>

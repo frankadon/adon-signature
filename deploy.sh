@@ -11,4 +11,5 @@ git init
 git add -A
 git commit -m 'deploy'
 git push -f git@github.com:adonpages/adon-signature.git master:gh-pages
+git subtree push --prefix dist origin gh-pages
 cd -
